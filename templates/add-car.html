@@ -1,0 +1,113 @@
+{% extends 'admin-layout.html' %} 
+{% block title %}Add a new Car{% endblock %}
+{% block content %} 
+<div class="container m-5">
+    <form action="/add-car" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter a car title" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Desc</label>
+          <input type="text" name="desc" class="form-control" id="exampleInputPassword1" placeholder="Enter Description" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Price /day</label>
+          <input type="number" name="per_day" class="form-control" id="exampleInputPassword1" placeholder="Enter Price per day" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Transmission</label>
+          <select class="form-control" name="transmission" id="exampleFormControlSelect1" required>
+            <option selected value="auto">Auto</option>
+            <option value="manual">Manual</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Doors</label>
+          <select class="form-control" name="doors" id="exampleFormControlSelect1" required>
+            <option value="2">2</option>
+            <option selected value="4">4</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Luggages</label>
+          <select class="form-control" name="luggages" id="exampleFormControlSelect1" required>
+            <option value="1">1</option>
+            <option selected value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Passengers</label>
+          <select class="form-control" name="passengers" id="exampleFormControlSelect1" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputEmail1">Picture</label>
+            <input type="file" name="picture" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Upload a picture" required>
+          </div>
+          <div class="my-4">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="sunroof" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Sunroof
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="gps" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        GPS Navigation
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="audo-input" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">
+                        Audio input
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="all-wheel" id="defaultCheck4">
+                    <label class="form-check-label" for="defaultCheck4">
+                        All Wheel drive
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="bluetooth" id="defaultCheck5">
+                    <label class="form-check-label" for="defaultCheck5">
+                        Bluetooth
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="usb-input" id="defaultCheck6">
+                    <label class="form-check-label" for="defaultCheck6">
+                        USB input
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"  name="fm" id="defaultCheck7">
+                    <label class="form-check-label" for="defaultCheck7">
+                        FM Radio
+                    </label>
+                </div>
+    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{%endblock %}
